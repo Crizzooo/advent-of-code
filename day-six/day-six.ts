@@ -73,7 +73,7 @@ class LanternFishSchool {
 function getFishCountAfterCycle(remainingCycle: number, fishCycle: number = 8) {
   // totalFish = 1
   let totalSpawnedFish = 1;
-
+  console.log('processing ', remainingCycle);
   while (remainingCycle > 0) {
     remainingCycle--;
     fishCycle--;
@@ -183,14 +183,15 @@ const run = () => {
   // const school = new LanternFishSchool(lanternFish);
   // school.processDays(256);
   // console.log(school.school.length);
-  // console.log('test: ', lanternFish.reduce((a, b) => a + getFishCountAfterCycle(256, b), 0));
+  console.log('test: ', lanternFish.reduce((a, b) => a + getFishCountAfterCycle(256, b), 0));
   // pt 2
   // console.log(getFishCountAfterCycle(11, 3));
+  // getFishCountAfterCycle(256, lanternFish);
 
-  console.log(createFishHash(lanternFish));
-  const hash = createFishHash(lanternFish);
-  console.log('hash ', hash);
-  console.log(processFishHash(3, hash));
+  // console.log(createFishHash(lanternFish));
+  // const hash = createFishHash(lanternFish);
+  // console.log('hash ', hash);
+  // console.log(processFishHash(3, hash));
 };
 
 console.log(run());
